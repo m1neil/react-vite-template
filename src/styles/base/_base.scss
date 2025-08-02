@@ -1,0 +1,35 @@
+@use "./mixins" as *;
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-height: toRem(48);
+	padding: toRem(10) toRem(25);
+	min-width: toRem(188);
+	font-weight: 500;
+	font-size: toRem(14);
+	line-height: 1.71;
+	color: #fff;
+	background-color: #000;
+	border: toRem(1) solid #000;
+	border-radius: toRem(6);
+	text-transform: capitalize;
+	transition:
+		color 0.3s,
+		background-color 0.3s,
+		border-color 0.3s;
+	&--small {
+		min-width: auto;
+		min-height: auto;
+		font-size: toRem(18);
+		padding: toRem(15) toRem(20);
+		line-height: 1;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: transparent;
+			color: #000;
+		}
+	}
+}
